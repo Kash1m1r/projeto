@@ -1,0 +1,248 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(teste.jpg);
+    background-size: cover; 
+}
+.box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0,.5);
+    border-radius: 10px;
+}
+.box h2 
+{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.box .inputBox
+{
+    position: relative;
+}
+.box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.box .inputBox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 14px;
+}
+button.css3button
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.label-float{
+    position: relative;
+    padding-top: 13px;
+  }
+  
+  .label-float input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline: none;
+    min-width: 250px;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance:none;
+  }
+  
+  .label-float input:focus{
+    border: 2px solid #3951b2;
+  }
+  
+  .label-float input::placeholder{
+    color:transparent;
+  }
+  
+  .label-float label{
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .label-float input:required:invalid + label{
+    color: red;
+  }
+  .label-float input:focus:required:invalid{
+    border: 2px solid red;
+  }
+  .label-float input:required:invalid + label:before{
+    content: '*';
+  }
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    top: 0;
+    color: #3951b2;
+  }
+  body{
+    font-family: sans-serif;
+  }
+  
+  .fab{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+  }
+  
+  .fab button{
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    background-color: #cb60b3;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,.4);
+    font-size: 24px;
+    color: white;
+      
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+  
+  .fab button:focus{
+    outline: none;
+  }
+  
+  .fab button.main{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #5b19b7;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+  
+  .fab button.main:before{
+    content: '⏚';
+  }
+  
+  .fab ul{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    padding:0;
+    padding-right:5px;
+    margin:0;
+    list-style:none;
+    z-index:10;
+    
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+  
+  .fab ul li{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: -10%;
+    opacity: 0;
+    
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    transition: .3s ease-out;
+  }
+  
+  .fab ul li label{
+    margin-right:10px;
+    white-space: nowrap;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    border-radius:3px;
+    height: 18px;
+    font-size: 16px;
+    pointer-events: none;
+    opacity:0;
+    
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+  }
+  
+  .fab button.main:active,
+  .fab button.main:focus{
+    outline: none;
+    background-color: #7716ff;
+    box-shadow: 0 3px 8px rgba(0,0,0,.5);
+   }
+   
+  .fab button.main:active:before,
+  .fab button.main:focus:before{
+    content: '↑';
+  }
+  
+  .fab button.main:active + ul,
+  .fab button.main:focus + ul{
+    bottom: 70px;
+  }
+  
+  .fab button.main:active + ul li,
+  .fab button.main:focus + ul li{
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+  
+  .fab button.main:active + ul li:hover label,
+  .fab button.main:focus + ul li:hover label{
+    opacity: 1;
+  }

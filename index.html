@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="conteudo"></section>
+        <div class="box">
+            <h2>Login</h2>
+        <form>
+                <div class="fab">
+                <button class="main">
+                </button>
+                <ul>
+                  <li>
+                    <label for="opcao1">Opção 1</label>
+                    <button id="opcao1">
+                    ⎈
+                    </button>
+                  </li>
+                  <li>
+                    <label for="opcao2">Opção 2</label>
+                    <button id="opcao2">
+                    ⎗
+                    </button>
+                  </li>
+                  <li>
+                    <label for="opcao3">Opção 3</label>
+                    <button id="opcao3">
+                    ☏
+                    </button>
+                  </li>
+                </ul>
+              </div>
+               
+            <div class="inputBox">
+                <input type="text" name="email" required="">
+                <label>Email:</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="" required="">
+                <label>Nome:</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="" required="">
+                <label>Senha:</label>
+            </div>
+            <button type="button" name="" value="Cadastro" class="css3button">Entrar</button>       
+        </form>
+        <script>
+            document.querySelectorAll('[pro-nav]').forEach(link => {
+                const conteudo = document.getElementById('conteudo')
+    
+                link.onclick = function(e) {
+                    e.preventDefault()
+                    fetch(link.getAttribute('pro-nav'))
+                        .then(resp => resp.text())
+                        .then(html => conteudo.innerHTML = html)
+                        .then(display => document.getElementById('conteudo'))
+                }
+            });
+        </script>
+
+</body>
+</html>
